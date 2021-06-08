@@ -7,6 +7,19 @@ export interface IProduct {
   category: number;
 }
 
+export interface IDevieryMethod {
+  id: number;
+  name: string;
+}
+
+export interface IOrder {
+  id: number;
+  product: IProduct;
+  deliveryMethod: IDevieryMethod;
+}
+
 export type IShopContextState = {
   products: IProduct[];
+  readingList: IProduct[];
+  orders: IOrder[];
 }
